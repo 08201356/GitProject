@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>From Currency</th>
+    <th>To Currency</th>
+  </tr>
+  <tr>
+    <td> <input type="number" id="Amount"></td>
+    <td>
+      <select id="From">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+      </select>
+      <select id="To">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+      </select>
+    </td>
+    <td><button onclick="exchange()">Calculate</button></td>
+  </tr>
+</table>
+<br>
+<p id="result"></p>
+<script>
+  function exchange() {
+    let Amount = document.getElementById("Amount").value;
+    let From = document.getElementById("From").value;
+    let To = document.getElementById("To").value;
+    let Result;
+
+    if (From == "USD" && To == "VND") {
+      Result = "Result:" + (Amount * 24000) + "D"
+    } else if (From == "VND" && To == "USD") {
+      Result = "Result:" + (Amount / 24000) + "$"
+    } else {
+      Result = "Result:" + Amount + "$"
+    }
+    alert(Result)
+  }
+</script>
+</body>
+</html>
