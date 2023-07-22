@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<h2>Calculator Test</h2>
+<input type="number" id="firstNum" placeholder="First Number" size="60">
+<input type="number" id="secondNum" placeholder="Second Number" size="60"><br>
+<button id="Addition" onclick="addition()">Addition(+)</button>
+<button id="Subtraction" onclick="subtraction()">Subtraction(-)</button>
+<button id="Multiplication" onclick="multiplication()">Multiplication(x)</button>
+<button id="Division" onclick="division()">Division</button><br>
+<p id="Result"></p>
+<script>
+  function addition() {
+    let num1 = document.getElementById("firstNum").value;
+    let num2 = document.getElementById("secondNum").value;
+    let result = Number(num1) + Number(num2);
+    alert(result);
+  }
+
+  function subtraction() {
+    let num1 = document.getElementById("firstNum").value;
+    let num2 = document.getElementById("secondNum").value;
+    let result = Number(num1) - Number(num2);
+    alert(result);
+  }
+  function multiplication() {
+    let num1 = document.getElementById("firstNum").value;
+    let num2 = document.getElementById("secondNum").value;
+    let result = Number(num1) * Number(num2);
+    alert(result);
+  }
+  function division() {
+    let num1 = document.getElementById("firstNum").value;
+    let num2 = document.getElementById("secondNum").value;
+    let result = Number(num1) / Number(num2);
+    alert(result);
+  }
+</script>
+</body>
+</html>
